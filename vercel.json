@@ -1,0 +1,5 @@
+{
+  "buildCommand": "ng build",
+  "installCommand": "npm install --legacy-peer-deps",
+  "outputDirectory": "dist/james-portfolio/browser"
+}
