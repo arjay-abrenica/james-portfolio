@@ -1,0 +1,21 @@
+<section id="projects" class="py-20 max-w-4xl mx-auto px-6 border-t border-dark-700/40">
+  <h2 class="text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-8">Selected Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div *ngFor="let p of projects" class="group p-6 rounded-xl bg-dark-800 border border-dark-700 hover:border-zinc-500 transition-all flex flex-col justify-between">
+      <div>
+        <h3 class="text-lg font-semibold text-white group-hover:text-zinc-200 mb-2">{{ p.title }}</h3>
+        <p class="text-sm text-zinc-400 leading-relaxed mb-6">{{ p.description }}</p>
+      </div>
+      <div>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span *ngFor="let tag of p.tags" class="text-xs px-2.5 py-1 rounded-md bg-dark-900 border border-dark-700 text-zinc-400">
+            {{ tag }}
+          </span>
+        </div>
+        <a [href]="p.link" class="inline-flex items-center text-xs font-medium text-white hover:underline">
+          View Repository &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
